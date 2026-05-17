@@ -25,10 +25,6 @@ NASSAV 是一个基于 Python 开发的多源影视资源下载管理工具，�
 - 🔒 文件锁机制：确保同一时间只有一个下载任务运行
 - 🎨 媒体服务器兼容：自动生成 NFO 文件，支持主流媒体服务器
 
-## Jellyfin预览
-
-![](pic/1.png)
-
 ## 系统要求
 
 - **稳定的网络连接和代理服务**
@@ -157,24 +153,6 @@ curl -X POST http://127.0.0.1:49530/process -d "车牌号"
 后端提供了两个API：
 1. 获取车牌号列表：/api/videos
 2. 获取车牌号详细信息：/api/videos/FPRE-017
-
-请求结果如下：
-```
-/api/videos
------------------------------
-[{"id":"ACHJ-057","title":"ACHJ-057 時には勝手に痴女りたい…。Madonna専属 究極美熟女『めぐり』お貸ししますー。","poster":"/file/ACHJ-057/ACHJ-057-poster.jpg"},{"id":"ADN-604","title":"ADN-604 お義父さんは私の事、どう思ってますか？ 七海ティナ","poster":"/file/ADN-604/ADN-604-poster.jpg"},{"id":"AGAV-122","title":"AGAV-122 顔で抜く！！顔面ドアップPOV 関西弁でイチャサド射精管理してくる年上彼女との同棲生活 流川莉央","poster":"/file/AGAV-122/AGAV-122-poster.jpg"},...]
-
-/api/videos/FPRE-017
------------------------------
-{"id":"FPRE-017","title":"FPRE-017 爆乳セレブ痴女に見つめられて犯●れたい 菊乃らん","releaseDate":"2024-02-02","fanarts":["/file/FPRE-017/FPRE-017-fanart-1.jpg","/file/FPRE-017/FPRE-017-fanart-10.jpg","/file/FPRE-017/FPRE-017-fanart-11.jpg","/file/FPRE-017/FPRE-017-fanart-12.jpg","/file/FPRE-017/FPRE-017-fanart-13.jpg","/file/FPRE-017/FPRE-017-fanart-14.jpg","/file/FPRE-017/FPRE-017-fanart-15.jpg","/file/FPRE-017/FPRE-017-fanart-16.jpg","/file/FPRE-017/FPRE-017-fanart-17.jpg","/file/FPRE-017/FPRE-017-fanart-18.jpg","/file/FPRE-017/FPRE-017-fanart-19.jpg","/file/FPRE-017/FPRE-017-fanart-2.jpg","/file/FPRE-017/FPRE-017-fanart-20.jpg","/file/FPRE-017/FPRE-017-fanart-21.jpg","/file/FPRE-017/FPRE-017-fanart-3.jpg","/file/FPRE-017/FPRE-017-fanart-4.jpg","/file/FPRE-017/FPRE-017-fanart-5.jpg","/file/FPRE-017/FPRE-017-fanart-6.jpg","/file/FPRE-017/FPRE-017-fanart-7.jpg","/file/FPRE-017/FPRE-017-fanart-8.jpg","/file/FPRE-017/FPRE-017-fanart-9.jpg","/file/FPRE-017/FPRE-017-fanart.jpg"],"videoFile":"/file/FPRE-017/FPRE-017.mp4"}
-```
-
-据此使用Vue实现一个前端，预览list和detail。
-
-list页：
-![](pic/gallery-list.png)
-detail页：
-![](pic/gallery-detail.png)
 
 前端部署方式：
 1. 先调整`frontend/src/api/videos.js`中后端的配置：
